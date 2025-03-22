@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="admin.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Админ-панель</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="players.html">Игроки</a></li>
+                <li><a href="games.html">Игры</a></li>
+                <li class="active"><a href="admin.html">Админ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section>
+            <h2>Добавить матч</h2>
+            <form id="match-form">
+                <input type="date" id="match-date" required>
+                <input type="text" id="match-opponent" placeholder="Соперник" required>
+                <input type="text" id="match-score" placeholder="Счет (0:0)" required>
+                <select id="match-status">
+                    <option value="Завершен">Завершен</option>
+                    <option value="Ожидание">Ожидание</option>
+                </select>
+                <button type="submit">Добавить</button>
+            </form>
+
+            <h2>Список матчей</h2>
+            <table id="matches-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Соперник</th>
+                        <th>Счет</th>
+                        <th>Статус</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody id="matches-list"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Добавить игрока</h2>
+            <form id="player-form">
+                <input type="text" id="player-name" placeholder="Имя игрока" required>
+                <input type="text" id="player-position" placeholder="Позиция" required>
+                <input type="number" id="player-number" placeholder="Номер" required>
+                <input type="url" id="player-photo" placeholder="Ссылка на фото" required>
+                <button type="submit">Добавить</button>
+            </form>
+
+            <h2>Список игроков</h2>
+            <div id="players-list"></div>
+        </section>
+    </main>
+
+    
+</body>
+</html>
