@@ -1,0 +1,167 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+/* Цвета команды */
+:root {
+    --primary-color: #0052cc; /* Синий */
+    --secondary-color: #0099ff; /* Голубой */
+    --accent-color: #ffffff; /* Белый */
+}
+
+/* Общие стили */
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Стили главной страницы */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('images/stadium.jpg') no-repeat center center/cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: var(--accent-color);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Карточки игроков */
+/* Стили игроков */
+.players-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.player {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.player:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.player img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+}
+
+.player h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.player p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.player-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+/* Таблица матчей */
+.matches-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.matches-table th, .matches-table td {
+    padding: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+.matches-table th {
+    background: var(--primary-color);
+    font-weight: bold;
+}
+
+.matches-table tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Фиксированный футер */
+footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
